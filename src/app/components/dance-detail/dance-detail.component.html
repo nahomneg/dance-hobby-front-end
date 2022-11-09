@@ -1,0 +1,8 @@
+<div>
+  <h5>Dance Style      => {{dance.name}}</h5>
+  <h5>Country Of Origin => {{dance.countryOfOrigin}}</h5>
+  <h5>Events </h5>
+  <ul>
+    <li *ngFor="let event of dance.events">{{event.name}} ----> {{event.date | date}}</li>
+  </ul>
+</div>
