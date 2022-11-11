@@ -1,5 +1,10 @@
 
 <ul>
-  <li *ngFor="let game of games" routerLink="/dances/{{game._id}}"> {{game.name}}</li>
+  <li *ngFor="let dance of dances" routerLink="/dances/{{dance._id}}" class="single-dance-item">
+    <span>{{dance.name}}</span>
+    <span><button (click)="onDeleteDance(dance._id,$event)">Delete</button>
+    </span>
+  </li>
 </ul>
+
 

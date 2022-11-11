@@ -2,8 +2,8 @@
 body{
   font-family: "Courier New", sans-serif;
   height: 100%;
-  /*background: darkslategray;*/
-  /*color: white;*/
+  margin:0;
+
 }
 app-dance-list{
   height: 100px;

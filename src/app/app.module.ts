@@ -8,6 +8,9 @@ import {RouterModule} from "@angular/router";
 import { DanceListComponent } from './components/dance-list/dance-list.component';
 import { DanceDetailComponent } from './components/dance-detail/dance-detail.component';
 import {HttpClientModule} from "@angular/common/http";
+import {AddDanceComponent} from "./components/add-dance/add-dance.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -15,23 +18,39 @@ import {HttpClientModule} from "@angular/common/http";
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    AddDanceComponent,
     DanceListComponent,
-    DanceDetailComponent
+    DanceDetailComponent,
+    LoginComponent,
   ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        RouterModule.forRoot([
-          {
-            path:'',
-            component:DanceListComponent
-          },
-          {
-            path:'dances/:danceId',
-            component:DanceDetailComponent
-          }
-        ])
-    ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: DanceListComponent
+      },
+      {
+        path: 'dances/:danceId',
+        component: DanceDetailComponent
+      },
+      {
+        path: 'adddance',
+        component : AddDanceComponent
+      },
+      {
+        path: 'login',
+        component :LoginComponent
+      },
+      {
+        path:'**',
+        component: DanceListComponent
+      }
+    ]),
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

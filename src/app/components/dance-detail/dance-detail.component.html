@@ -1,8 +1,22 @@
 <div>
-  <h5>Dance Style      => {{dance.name}}</h5>
-  <h5>Country Of Origin => {{dance.countryOfOrigin}}</h5>
-  <h5>Events </h5>
-  <ul>
-    <li *ngFor="let event of dance.events">{{event.name}} ----> {{event.date | date}}</li>
-  </ul>
+  <div id="dance-info">
+    <h1>{{dance.name}}</h1>
+    <h5>Country Of Origin => {{dance.countryOfOrigin}}</h5>
+    <h3>Events </h3>
+  </div>
+  <div id="events-area">
+    <ul>
+      <li *ngFor="let event of dance.events">{{event.name}} ----> {{event.date | date}}</li>
+    </ul>
+    <form [formGroup]="eventForm" (ngSubmit)="onAddEvent()">
+      <p>Add A new Event</p>
+      <label>Name: <input type="text" formControlName="name"/></label>
+      <label>Date: <input type="datetime-local" formControlName="date"/></label>
+      <label>Latitude: <input type="number" formControlName="latitude"/></label>
+      <label>Longitude: <input type="number" formControlName="longitude"/></label>
+
+      <button >Add Event</button>
+    </form>
+
+  </div>
 </div>
