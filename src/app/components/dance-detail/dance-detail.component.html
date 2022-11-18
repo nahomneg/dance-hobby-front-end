@@ -5,10 +5,18 @@
     <h3>Events </h3>
   </div>
   <div id="events-area">
-    <ul>
-      <li *ngFor="let event of dance.events">{{event.name}} ----> {{event.date | date}}</li>
-    </ul>
-    <form [formGroup]="eventForm" (ngSubmit)="onAddEvent()">
+    <div id="event-list">
+      <form id="search">
+        <input type="number" placeholder="latitude"/>
+        <input type="number" placeholder="longitude"/>
+        <button>Search</button>
+      </form>
+      <ul>
+        <li *ngFor="let event of dance.events">{{event.name}} ----> {{event.date | date}}</li>
+      </ul>
+    </div>
+
+    <form id="add-event-form" [formGroup]="eventForm" (ngSubmit)="onAddEvent()">
       <p>Add A new Event</p>
       <label>Name: <input type="text" formControlName="name"/></label>
       <label>Date: <input type="datetime-local" formControlName="date"/></label>
