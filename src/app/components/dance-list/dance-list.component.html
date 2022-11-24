@@ -1,15 +1,15 @@
 
-<ul>
+<ul >
   <li *ngFor="let dance of dances" routerLink="/dances/{{dance._id}}" class="single-dance-item">
-    <nz-card nzHoverable style="width:240px" [nzCover]="coverTemplate">
-      <nz-card-meta nzTitle="{{dance.name}}" nzDescription="www.instagram.com"></nz-card-meta>
+    <nz-card nzHoverable [nzCover]="coverTemplate">
+      <nz-card-meta nzTitle="{{dance.name | titlecase}}" nzDescription="{{dance.countryOfOrigin}}"></nz-card-meta>
+      <button  (click)="onDeleteDance(dance._id,$event)" nz-button nzDanger>Delete</button>
     </nz-card>
     <ng-template #coverTemplate>
-      <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+      <img class="dance-cover" alt="example" src="{{dance.imageurl}}" />
     </ng-template>
-    <span><button nz-button nzType="primary" nzDanger (click)="onDeleteDance(dance._id,$event)">Delete</button>
-    </span>
   </li>
 </ul>
+
 
 

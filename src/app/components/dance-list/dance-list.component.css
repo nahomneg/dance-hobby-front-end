@@ -1,19 +1,26 @@
 li{
   cursor: pointer;
+  list-style: none;
 }
 ul{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 button{
 
   cursor: pointer;
 }
+
 .single-dance-item{
   justify-content: space-between;
-  display: flex;
-  width: 400px;
-  border: 0.3px dashed black;
   padding:10px;
   margin:10px 10px;
 }
+.dance-cover{
+  /*max-height: 300px;*/
+  /*min-height: 200px;*/
+  object-fit: cover;
+  width: 350px;
+  height: 300px;
+}
+

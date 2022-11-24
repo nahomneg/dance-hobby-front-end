@@ -20,6 +20,7 @@ export class DanceListComponent implements OnInit {
   getAllDances():void{
     this._danceService.getAllDances().subscribe((dances)=>{
       this.dances = dances;
+      console.log(dances[4])
     });
   }
 

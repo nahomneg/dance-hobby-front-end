@@ -18,6 +18,14 @@ import en from '@angular/common/locales/en';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NzButtonModule} from "ng-zorro-antd/button";
 import {NzCardModule} from "ng-zorro-antd/card";
+import {NzIconModule} from "ng-zorro-antd/icon";
+import {NzFormModule} from "ng-zorro-antd/form";
+import {NzSelectModule} from "ng-zorro-antd/select";
+import {NzInputModule} from "ng-zorro-antd/input";
+import {NzUploadModule} from "ng-zorro-antd/upload";
+import {NzTableModule} from "ng-zorro-antd/table";
+import {NzDividerModule} from "ng-zorro-antd/divider";
+import {NzModalModule} from "ng-zorro-antd/modal";
 
 registerLocaleData(en);
 
@@ -61,7 +69,15 @@ registerLocaleData(en);
         ReactiveFormsModule,
         BrowserAnimationsModule,
         NzButtonModule,
-        NzCardModule
+        NzCardModule,
+        NzIconModule,
+        NzFormModule,
+        NzSelectModule,
+        NzInputModule,
+        NzUploadModule,
+        NzTableModule,
+        NzDividerModule,
+        NzModalModule
     ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

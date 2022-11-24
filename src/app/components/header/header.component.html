@@ -1,8 +1,10 @@
 <nav>
   <h1>Dancing Events</h1>
+
   <ul>
     <li routerLink="/">Dance List</li>
     <li routerLink="/adddance">Add Dance</li>
-    <li routerLink="/login">Login</li>
+    <li *ngIf="!isLoggedIn" routerLink="/login">Login</li>
+    <li *ngIf="isLoggedIn" (click)="logout()">Logout</li>
   </ul>
 </nav>

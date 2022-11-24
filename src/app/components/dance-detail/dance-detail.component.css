@@ -3,6 +3,10 @@
   flex-direction: column;
   gap:10px;
 }
+#main-container{
+  display: flex;
+  justify-content: space-around;
+}
 #search{
   display: flex;
   gap:10px;
@@ -13,8 +17,47 @@ li{
   width: 400px;
   border: 0.3px dashed black;
   padding:10px;
-  margin:10px 10px;
+  margin:10px 0px;
 
+}
+[nz-icon] {
+  margin-right: 6px;
+  font-size: 24px;
+  color: dodgerblue;
+}
+#dance-info{
+  box-shadow: 1px 3px 3px grey;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #eaeaea;
+  flex:1;
+}
+#event-list{
+  box-shadow: 1px 3px 3px grey;
+  padding: 20px;
+  flex:1;
+  margin: 20px;
+  border: 1px solid #eaeaea;
+}
+.dance-image{
+
+  width:100%;
+}
+h1,h2{
+  color:cornflowerblue;
+}
+.edit-icon{
+  cursor: pointer;
+}
+.editable-field{
+  display:flex;
+  align-items: center;
+}
+#add-event-form{
+  box-shadow: 1px 3px 3px grey;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #eaeaea;
 }
 #events-area{
   display: flex;
@@ -32,4 +75,7 @@ form input{
 }
 #dance-info{
 margin:20px;
+}
+ul{
+  padding: 0;
 }

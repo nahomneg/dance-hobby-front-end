@@ -1,5 +1,5 @@
 export class Event{
-  private _id!: string;
+  _id!: string;
   private _name!: string;
   private _date!: Date;
   get name (){
@@ -15,3 +15,4 @@ export class Event{
     this._date = date;
   }
 }
+

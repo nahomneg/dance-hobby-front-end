@@ -1,5 +1,10 @@
+import {Event} from './event'
 export class Dance{
-  private _id!:string;
-  private name!:string;
-  private event!:Event;
+   _id!:string;
+   name!:string;
+   countryOfOrigin!:string;
+   imageurl!:string;
+   events!:Event [];
+
 }
+
